@@ -1,27 +1,11 @@
 import tkinter as tk
 root = tk.Tk()
-root.title("Simple App")
-def add_to_list():
-    text =  entry.get()
-    if text:
-        text_list.insert(tk.END, text)
-        entry.delete(0,tk.END)
-
-
-frame = tk.Frame(root)
-frame.grid(row=0, column=0)
-
-entry = tk.Entry(frame)
-entry.grid(row=0, column=0)
-
-entry.bind("<Return>", lambda e: add_to_list())
-
-entry_btn = tk.Button(frame, text="Add", command = add_to_list)
-entry_btn.grid(row=0, column=1)
-
-text_list = tk.Listbox(frame)
-text_list.grid(row=1, column=0)
-
+root.title("Test App")
+root.geometry("250x200")
+lbl = tk.Label(root, text="Welcome to Python Tkinter!")
+lbl.grid(column=0, row=0)
+def on_click():
+    lbl.configure(text="Button Clicked")
+btn = tk.Button(root, text="Click Here", command = on_click)
+btn.grid(column=0, row=1)
 root.mainloop()
-
-
