@@ -1,11 +1,56 @@
 import tkinter as tk
-root = tk.Tk()
-root.title("Test App")
-root.geometry("250x200")
-lbl = tk.Label(root, text="Welcome to Python Tkinter!")
-lbl.grid(column=0, row=0)
-def on_click():
-    lbl.configure(text="Button Clicked")
-btn = tk.Button(root, text="Click Here", command = on_click)
-btn.grid(column=0, row=1)
-root.mainloop()
+from tkinter import ttk
+
+def main():
+    app = Application()
+    app.mainloop()
+
+class Application(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title("List Application")
+        self.columnconfigure(1, weight=1)
+        self.columnconfigure(0, weight=1)
+        self.rowconfigure(0, weight=1)
+
+        frame = InputForm(self)
+        frame.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
+
+        frame2 = InputForm(self)
+        frame2.grid(row=0, column=1, sticky="nsew", padx=5, pady=5)
+
+        self.exit_btn = ttk.Button(self, text="Exit", command=self.destroy)
+        self.exit_btn.grid(row=3, column=0)
+
+class InputForm(tk.Frame):
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.columnconfigure(1, weight=1)
+        self.rowconfigure(0, weight=1)
+
+        self.entry = ttk.Entry(self)
+        self.entry.grid(row=0, column=0)
+
+        self.entry.bind("<Return>", self.add_to_list)
+
+        self.entry_btn = ttk.Button(self, text="Add", command=self.add_to_list)
+        self.entry_btn.grid(row=0, column=1)
+
+        self.clear_btn = ttk.Button(self, text="Clear", command=self.clear_list)
+        self.clear_btn.grid(row=0, column=2)
+
+        self.text_list = tk.Listbox(self)
+        self.text_list.grid(row=1, column=0, columnspan=3, sticky="nsew")
+
+
+    def add_to_list(self, _event=None):
+        text = self.entry.get()
+        if text:
+            self.text_list.insert(tk.END, text)
+            self.entry.delete(0, tk.END)
+
+    def clear_list(self):
+        self.text_list.delete(0, tk.END)
+
+if __name__ == "__main__":
+    main()

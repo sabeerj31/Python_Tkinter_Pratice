@@ -9,8 +9,8 @@ class Application(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Simple App")
-        self.columnconfigure(1, weight=1)
         self.columnconfigure(0, weight=1)
+        self.columnconfigure(1, weight=1)
         self.rowconfigure(0, weight=1)
 
         frame = InputForm(self)
@@ -22,14 +22,12 @@ class Application(tk.Tk):
 class InputForm(ttk.Frame):
     def __init__(self, parent):
         super().__init__(parent)
-        self.columnconfigure(0, weight=1)
-        self.rowconfigure(1, weight=1)
+        self.columnconfigure(1, weight=1)
+        self.rowconfigure(0, weight=1)
 
         self.entry = ttk.Entry(self)
         self.entry.grid(row=0, column=0)
-
         self.entry.bind("<Return>", self.add_to_list)
-
         self.entry_btn = ttk.Button(self, text="Add", command= self.add_to_list)
         self.entry_btn.grid(row=0, column=1)
 
