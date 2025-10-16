@@ -4,7 +4,7 @@ from tkinter import messagebox
 class MyGUI:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("Sabeer")
+        self.root.title("My GUI")
 
 
         self.menubar = tk.Menu(self.root)

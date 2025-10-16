@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9afbf55d-fe99-4fdd-880d-5238301a8060" name="Changes" comment="learnt to use classes in tkinter">
+    <list default="true" id="9afbf55d-fe99-4fdd-880d-5238301a8060" name="Changes" comment="learnt to use classes &amp; functions in tkinter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/using_classes_in_Tkinter.py" beforeDir="false" afterPath="$PROJECT_DIR$/using_classes_in_Tkinter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +55,8 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true"
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -106,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759928674477</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="learnt to use classes &amp; functions in tkinter">
+      <option name="closed" value="true" />
+      <created>1760014637742</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760014637742</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +160,7 @@
     <MESSAGE value="tkinter simple test app to add item to list" />
     <MESSAGE value="learnt responsive widgets, padding,etc" />
     <MESSAGE value="learnt to use classes in tkinter" />
-    <option name="LAST_COMMIT_MESSAGE" value="learnt to use classes in tkinter" />
+    <MESSAGE value="learnt to use classes &amp; functions in tkinter" />
+    <option name="LAST_COMMIT_MESSAGE" value="learnt to use classes &amp; functions in tkinter" />
   </component>
 </project>
